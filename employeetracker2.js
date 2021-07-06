@@ -62,7 +62,7 @@ connection.connect((err) => {
           break;
 
           case 'Update Employee Role':
-          update();
+          updateEmployee();
           break;
 
           case 'View All Roles':
