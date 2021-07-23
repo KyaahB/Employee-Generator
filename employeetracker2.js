@@ -196,7 +196,6 @@ const updateEmployeeRole = () => {
         console.log('Updating role...\n');
           const query = connection.query(
             'UPDATE employees SET ? WHERE ?',
-            // set correlates to the first object(quantity) and where correlates to (flavor)
             [
               {
                 role_id: answer.updated_role_id
@@ -208,25 +207,15 @@ const updateEmployeeRole = () => {
             (err, res) => {
               if (err) throw err;
               console.log(`${res.affectedRows} products updated!\n`);
-              // Call deleteProduct AFTER the UPDATE completes
-              // deleteProduct();
-            }
-          );
+              
+            });
       })
-
-    }
-  )
-
-
-  // // logs the actual query being run
-  // console.log(query.sql);
-};
+})};
 
 
 
 
 const addEmployee = () => {
-  // ask the user first what do they want to name the new department
   inquirer.prompt([
     {
       type: "input",
@@ -261,27 +250,6 @@ const addEmployee = () => {
         })
     })
 };
-
-// const addEmployee = () => {
-//     connection.query(
-//       'INSERT INTO employees SET ?',
-
-//       {
-//         role_id: '1',
-//         title: '300000',
-
-//       },
-
-//        (err, res) => {
-//     if (err) throw err;
-//     console.log(`${res.affectedRows} employee updated!\n`);
-
-
-//       }) 
-
-//     };
-
-
 
 
 const viewRoles = () => {
