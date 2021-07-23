@@ -5,7 +5,7 @@ USE employeeTracker_DB;
 
 CREATE TABLE department (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30) 
+    d_name VARCHAR(30) 
 	
     
 );
@@ -66,7 +66,7 @@ INSERT INTO department (
 -- update employees
 UPDATE [employees]
 SET [role_id] = AUTO_INCREMENT
-WHERE Name = 'updatedEmployee';
+WHERE Name = 'updateEmployee';
 
 
 -- add role
