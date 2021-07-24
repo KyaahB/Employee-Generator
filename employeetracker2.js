@@ -33,7 +33,7 @@ const start = () => {
         'Add Department',
         'Add Employee',
         'Add Role',
-        'Update Employee Role',
+        'Update Role',
         'View All Roles',
         'View All Departments',
         'Im done'
@@ -63,8 +63,8 @@ const start = () => {
           addEmployee();
           break;
 
-        case 'Update Employee Role':
-          updateEmployeeRole();
+        case 'Update Role':
+          updateRole();
           break;
 
         case 'View All Roles':
@@ -76,13 +76,15 @@ const start = () => {
           break;
 
         default:
-          console.log(`Update done: ${answer.action}`);
+          'Im done'
+          connection.end()
           break;
       }
     })
 };
 
-//   get table from emploee table to appear in console (console.table)
+
+
 const viewEmployees = () => {
   connection.query(
     'SELECT * FROM employees',
@@ -94,9 +96,6 @@ const viewEmployees = () => {
 
 const viewEmployeesByDepartment = () => {
   connection.query(
-    // selecting everything from department
-    // 'SELECT * FROM department',
-    // select all from the employees, along with their corresponding departments
     'SELECT employees.id, employees.first_name, employees.last_name, role.title, role.salary, department.d_name FROM employees, role, department  WHERE employees.role_id=role.id AND role.department_id=department.id ',
     function (err, result) {
       console.table(result)
@@ -105,7 +104,6 @@ const viewEmployeesByDepartment = () => {
 };
 
 const addDepartment = () => {
-  // ask the user first what do they want to name the new department
   inquirer.prompt([
     {
       type: "input",
@@ -166,7 +164,7 @@ const addRole = () => {
     })
 };
 
-const updateEmployeeRole = () => {
+const updateRole = () => {
 
   const query = connection.query(
     "SELECT id, first_name FROM employees",
@@ -269,8 +267,5 @@ const viewDepartments = () => {
       start();
     })
 };
-
-
-
 
 
