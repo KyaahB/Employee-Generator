@@ -12,7 +12,7 @@ A simple, interactive team generating app for employers. It uses MySql and Inqui
 
 -[App Walkthrough](https://drive.google.com/file/d/10gmToPnTnqjhavDPPs0qCq8UO779Q9c_/view)
 
--[Screenshots](C:\Users\Kyaah\Documents\Employee-Generator\Screenshots.jpeg)
+-[Screenshot](C:\Users\Kyaah\Documents\Employee-Generator\Screenshots.jpeg)
 
 
 ## Contacts
