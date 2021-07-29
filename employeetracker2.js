@@ -204,8 +204,7 @@ const updateRole = () => {
             ],
             (err, res) => {
               if (err) throw err;
-              console.log(`${res.affectedRows} products updated!\n`);
-              
+              start();
             });
       })
 })};
