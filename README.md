@@ -18,16 +18,16 @@ A simple, interactive team generating app for employers. It uses MySql and Inqui
 
 ## Resources
 
--[MySql](https://www.npmjs.com/package/mysql)
+- [MySql](https://www.npmjs.com/package/mysql)
 
--[InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3)
+- [InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
--[Node](https://www.npmjs.com/)
+- [Node](https://www.npmjs.com/)
 
 
 
 ## Contacts
 
-[Github](https://github.com/KyaahB)
+- [Github](https://github.com/KyaahB/Employee-Generator)
 
 
